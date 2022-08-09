@@ -5,7 +5,7 @@ on:
     - main
 jobs:
   build-and-deploy
-  runs-on: mac-latest
+  runs-on: macos-latest
   concurrency: ci${{github.ref}}
   steps:
     - name: Checkout
