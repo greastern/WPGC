@@ -41,13 +41,12 @@ body{
   background-color: #2980b9;
 }
 .youtube {
-  border: 3px red dashed;
-  margin-top: 20px;
+  columns: 5px auto;
+  float: left;
+  position: relative;
+  padding: 5px;
+}
+.video{
+  
 }
 
-button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 20px;
-  background-color: #e67e22;
-}
