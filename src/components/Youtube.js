@@ -1,20 +1,15 @@
-import { fs } from 'fs';
+
 import React, {Component} from 'react';
 import { isCompositeComponent } from 'react-dom/test-utils';
 import '../App.css';
 require("dotenv").config();
 
-
-module.exports = {
-    YOUTUBE_API_KEY: process.env.YOUTUBE_API_KEY,
-    WPGC_Channel_Id: process.env.WPGC_Channel_Id,
-}
-
-var results = 10;
+ var results = 10;
  
+const {REACT_APP_YOUTUBE_API_KEY, REACT_APP_WPGC_Channel_Id} = process.env;
 //https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCzqnaQ9acUUCW--Z62vhP4g&maxResults=10&order=date&key=AIzaSyC2t2q0Ee7zGztEk8Y8KQK42CL3xaLClM8
 
-var finalURL = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${WPGC_Channel_Id}&maxResults=${results}&order=date&key=${YOUTUBE_API_KEY}`
+var finalURL = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=${REACT_APP_WPGC_Channel_Id}&maxResults=${results}&order=date&key=${REACT_APP_YOUTUBE_API_KEY}`
 
 class Youtube extends Component {
     
